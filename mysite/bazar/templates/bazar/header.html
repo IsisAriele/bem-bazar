@@ -1,0 +1,32 @@
+{% load static %}
+
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %} Bem bazar {% endblock %}</title>
+
+    <!-- colocar fontes aqui -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- colocar css aqui -->
+    <link rel="stylesheet" href="{% static 'css/header.css' %}" />
+
+    {% block css %} 
+    
+    {% endblock %}
+  </head>
+
+  <body>
+     <!-- Cabeçalho -->
+  <div class="content">
+    <a href="{% url 'index' %}" ><img src="{% static 'images/logo.svg' %}" alt="" class="logo"></a>
+    <div class="buttons">
+        <a href="{% url 'cadastro' %}" class="cadastro">Cadastre-se</a>
+        <a href="{% url 'login' %}" class="entrar">Entre</a>
+    </div>
+  </div>
+  
+  {% block content %}{% endblock %}
+  </body>

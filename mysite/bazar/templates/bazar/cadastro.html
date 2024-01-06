@@ -1,0 +1,55 @@
+{% extends "bazar/header.html" %} 
+{% load static %} 
+{% block title %}
+Cadastre-se
+{% endblock %} 
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/header.css' %}" />
+<link rel="stylesheet" href="{% static 'css/cadastro.css' %}" />
+{% endblock %}
+{%block content %}
+
+<div class="principal">
+    <div class="principal-imagem">
+        <img src="{% static 'images/imagemcadastro.png' %}" alt="">
+    </div>
+    
+    <div class="principal-forms">
+        <div class="principal-titulo">
+            <h3>Crie sua conta</h3>
+            <p>Preencha seus dados abaixo</p>
+        </div>
+        
+        <!-- nome, email, telefone, senha -->
+        <form action="{% url 'cadastro' %}" method="POST" class="principal-form-campos">
+            {% csrf_token %}
+            
+            <!-- Campo Nome -->
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" name="nome" required>
+    
+            <!-- Campo Email -->
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+    
+            <!-- Campo Telefone -->
+            <label for="telefone">Telefone</label>
+            <input type="tel" id="telefone" name="telefone" required>
+    
+            <!-- Campo Senha -->
+            <label for="senha">Senha</label>
+            <input type="password" id="senha" name="senha" required>
+    
+            <!-- Botão de Envio -->
+            <button type="submit">Cadastrar</button>
+        </form>
+    
+        
+        <div class="direct-login">
+            <p>Já tem uma conta? </p>
+            <a href="{% url 'login' %}" class="login">Clique aqui</a>
+        </div>
+        
+    </div>
+</div>
+{% endblock %}

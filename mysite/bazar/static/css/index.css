@@ -1,0 +1,62 @@
+
+.background-image {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 50%; /* Ajusta para a metade direita da tela visível */
+    /* background-image: url('caminho/da/sua/imagem.jpg'); */
+    background-size: cover; /* Ajusta a imagem para cobrir todo o contêiner */
+    /* background-position: center; Centraliza a imagem */
+    background-repeat: no-repeat;
+    z-index: -1;
+ 
+}
+
+.background-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta a imagem para cobrir todo o contêiner mantendo a proporção */
+}
+
+.principal {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    max-width: 1440px;
+    margin-top: 80px;
+    
+
+}
+
+.principal-image img {
+    width: 350px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.principal-descricao {
+    width: 400px;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.principal-descricao p {
+    line-height: 1.5; 
+}
+
+.principal-eventos {
+    margin-top: 10px;
+    background-color: #333333;
+    color: white;
+    text-decoration: none;
+    padding: 12px 32px;
+    border-radius: 30px;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    margin-right: auto; /* Define a margem à direita para alinhar à extremidade direita do contêiner pai */
+    display: inline-block; 
+}
+

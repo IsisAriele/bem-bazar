@@ -1,6 +1,8 @@
 from django.db import models
 from django.contrib.auth.models import User
  
+# O django já implementa autenticação por padrão atráves do User, 
+# por esse motivo ele será o suficiente para as demais implementações da minha aplicação.
 class Evento(models.Model):
     usuario = models.ForeignKey(User, on_delete=models.CASCADE)
     ativo = models.BooleanField(default=True)

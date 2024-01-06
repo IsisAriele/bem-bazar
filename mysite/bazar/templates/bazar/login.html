@@ -1,0 +1,47 @@
+{% extends "bazar/header.html" %} 
+{% load static %} 
+{% block title %}
+Entre
+{% endblock %} 
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/header.css' %}" />
+<link rel="stylesheet" href="{% static 'css/login.css' %}" />
+{% endblock %}
+{%block content %}
+
+<div class="principal">
+    <div class="principal-imagem">
+        <img src="{% static 'images/imagemlogin.png' %}" alt="">
+    </div>
+    
+    <div class="principal-forms">
+        <div class="principal-titulo">
+            <h3>Entre</h3>
+            <p>Preencha seus dados abaixo</p>
+        </div>
+        
+        <!-- nome, email, telefone, senha -->
+        <form action="{% url 'cadastro' %}" method="POST" class="principal-form-campos">
+            {% csrf_token %}
+            
+            <!-- Campo Email -->
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+    
+            <!-- Campo Senha -->
+            <label for="senha">Senha</label>
+            <input type="password" id="senha" name="senha" required>
+    
+            <!-- Botão de Envio -->
+            <button type="submit">Entrar</button>
+        </form>
+    
+        
+        <div class="direct-login">
+            <p>Ainda não tem uma conta? </p>
+            <a href="{% url 'cadastro' %}" class="login">Cadastre-se</a>
+        </div>
+        
+    </div>
+</div>
+{% endblock %}

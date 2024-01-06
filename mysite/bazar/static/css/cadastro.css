@@ -1,0 +1,87 @@
+.principal {
+    display: flex;
+    margin: auto;
+    max-width: 1046px;
+    padding: 40px 0;
+    align-items: center;
+    align-items: stretch; 
+}
+
+.principal-imagem img{
+    border-top-left-radius: 16px; /* Raio da borda superior direita */
+    border-bottom-left-radius: 16px;
+}
+
+.principal-forms {
+    flex: 1; /* Faz com que o elemento cresça para ocupar o espaço disponível */
+    padding: 20px 40px;
+    background-color: #FAF4F0;
+    border-top-right-radius: 16px; /* Raio da borda superior direita */
+    border-bottom-right-radius: 16px;
+    width: 100%; /* Ocupa 100% da largura disponível */
+}
+
+
+.principal-titulo {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 40px;
+}
+
+.principal-titulo h3 {
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    color: #333333;
+    margin: 0;
+    margin-top: 40px;
+}
+
+.principal-titulo p {
+    font-size: 20px;
+    color: #333333;
+}
+
+.principal-form-campos label {
+    display: block;
+    font-size: 16px;
+    color: #333333;
+    margin-bottom: 8px; /* Adapte conforme necessário para o espaçamento desejado */
+}
+
+.principal-form-campos input {
+    display: block;
+    width: 100%; /* Ocupa 100% da largura disponível */
+    padding: 8px;
+    border-radius: 8px;
+    border: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 16px; /* Adapte conforme necessário para o espaçamento desejado */
+}
+
+.principal-form-campos button {
+    margin-top: 40px;
+    display: block;
+    width: 100%; /* Ocupa 100% da largura disponível */
+    padding: 12px;
+    background-color: #333333;
+    color: white;
+    font-size: 18px;
+    border-radius: 40px;
+    border: none;
+}
+
+.direct-login {
+    display: flex;
+    align-items: center;
+    color: #333333;
+    justify-content: center;
+}
+
+.login {
+    margin-left: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    color: #333333;
+}
