@@ -9,12 +9,6 @@ def index(request):
     return render(request, "bazar/index.html", context)
 
 
-def login(request):
-    temp = "temporário"
-    context = {"temp": temp}
-    return render(request, "bazar/login.html", context)
-
-
 def eventos(request):
     temp = "temporário"
     context = {"temp": temp}

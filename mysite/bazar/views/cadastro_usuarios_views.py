@@ -15,7 +15,7 @@ class CadastroUsuarioView(View):
         form = CadastroUsuarioForm(request.POST)
         if form.is_valid():
             try:
-                User.objects.create(
+                User.objects.create_user(
                     first_name=form.data["first_name"],
                     last_name=form.data["last_name"],
                     username=form.data["email"],

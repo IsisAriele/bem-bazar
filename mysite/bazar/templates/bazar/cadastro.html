@@ -1,8 +1,8 @@
-{% extends "bazar/header.html" %} 
-{% load static %} 
+{% extends "bazar/header.html" %}
+{% load static %}
 {% block title %}
 Cadastre-se
-{% endblock %} 
+{% endblock %}
 {% block css %}
 <link rel="stylesheet" href="{% static 'css/header.css' %}" />
 <link rel="stylesheet" href="{% static 'css/cadastro.css' %}" />
@@ -13,7 +13,7 @@ Cadastre-se
     <div class="principal-imagem">
         <img src="{% static 'images/imagemcadastro.png' %}" alt="">
     </div>
-    
+
     <div class="principal-forms">
         <div class="principal-titulo">
             <h3>Crie sua conta</h3>
@@ -29,22 +29,22 @@ Cadastre-se
 
         <form action="{% url 'cadastro' %}" method="POST" class="principal-form-campos">
             {% csrf_token %}
-            
+
             {% for field in form.visible_fields %}
-                {{ field.errors }}
-                {{ field.label_tag }} {{ field }}
+            {{ field.errors }}
+            {{ field.label_tag }} {{ field }}
             {% endfor %}
 
             <!-- Botão de Envio -->
             <button type="submit">Cadastrar</button>
         </form>
-    
-        
+
+
         <div class="direct-login">
             <p>Já tem uma conta? </p>
             <a href="{% url 'login' %}" class="login">Clique aqui</a>
         </div>
-        
+
     </div>
 </div>
 {% endblock %}

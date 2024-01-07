@@ -20,6 +20,9 @@
 </head>
 
 <body>
+  {% if user.is_authenticated %}
+  <a href="{% url 'logout' %}" class="entrar">Sair</a>
+  {% else %}
   <!-- Cabeçalho -->
   <div class="content">
     <a href="{% url 'index' %}"><img src="{% static 'images/logo.svg' %}" alt="" class="logo"></a>
@@ -28,6 +31,7 @@
       <a href="{% url 'login' %}" class="entrar">Entre</a>
     </div>
   </div>
+  {% endif %}
 
   {% block content %}
   {% endblock %}
