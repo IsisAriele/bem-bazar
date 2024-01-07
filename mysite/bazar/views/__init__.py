@@ -18,3 +18,8 @@ def cadastroeventos(request):
     temp = "temporário"
     context = {"temp": temp}
     return render(request, "bazar/cadastro-eventos.html", context)
+
+def cadastroitem(request):
+    temp = "temporário"
+    context = {"temp": temp}
+    return render(request, "bazar/cadastro-item.html", context)

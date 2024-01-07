@@ -1,15 +1,75 @@
-{% extends "bazar/header.html" %} 
-{% load static %} 
+{% extends "bazar/header.html" %}
+{% load static %}
 {% block title %}
 Cadastre-se
-{% endblock %} 
+{% endblock %}
 {% block css %}
 <link rel="stylesheet" href="{% static 'css/header.css' %}" />
 <link rel="stylesheet" href="{% static 'css/eventos.css' %}" />
 {% endblock %}
 {%block content %}
 
-<!-- conteudo -->
+<div class="principal">
+    <h3>Confira nossos eventos</h3>
+    <div class="search-bar">
+        <input type="text" class="search-input" placeholder="Pesquise por um item específico...">
+        <a href="#"><img src="{% static 'images/busca.svg' %}" alt="Buscar" class="search-icon"></a>
+    </div>
+</div>
+
+<div class="principal-evento">
+    <div class="evento">
+        <img src="{% static 'images/eventocaridade1.png' %}" alt="">
+        <div class="evento-conteudo">
+            <div class="evento-data">
+                <img src="{% static 'images/calendario.svg' %}" alt="">
+                <p>15 a 17 de agosto</p>
+            </div>
+            <h4>MK plan o maior bazar de caridade</h4>
+            <p>O maior bazar de caridade de Natal, faça também sua doação ou reserve algum item por aqui!</p>
+            <a href="#">Saiba mais</a>
+            <img src="{% static 'images/linha.svg' %}" alt="">
+        </div>
+        
+    </div>
+
+    <div class="evento">
+        <img src="{% static 'images/eventocaridade2.png' %}" alt="">
+        <div class="evento-conteudo">
+            <div class="evento-data">
+                <img src="{% static 'images/calendario.svg' %}" alt="">
+                <p>15 a 17 de agosto</p>
+            </div>
+            <h4>MK plan o maior bazar de caridade</h4>
+            <p>O maior bazar de caridade de Natal, faça também sua doação ou reserve algum item por aqui!</p>
+            <a href="#">Saiba mais</a>
+            <img src="{% static 'images/linha.svg' %}" alt="">
+        </div>
+        
+    </div>
+
+    <div class="evento">
+        <img src="{% static 'images/eventocaridade3.png' %}" alt="">
+        <div class="evento-conteudo">
+            <div class="evento-data">
+                <img src="{% static 'images/calendario.svg' %}" alt="">
+                <p>15 a 17 de agosto</p>
+            </div>
+            <h4>MK plan o maior bazar de caridade</h4>
+            <p>O maior bazar de caridade de Natal, faça também sua doação ou reserve algum item por aqui!</p>
+            <a href="#">Saiba mais</a>
+            <img src="{% static 'images/linha.svg' %}" alt="">
+        </div>
+        
+    </div>
+  
+    </div>
+
+
+
+    
+</div>
+
 
 
 {% endblock %}

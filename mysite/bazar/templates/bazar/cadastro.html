@@ -19,13 +19,7 @@ Cadastre-se
             <h3>Crie sua conta</h3>
             <p>Preencha seus dados abaixo</p>
         </div>
-        {% if messages %}
-        <div class="messages">
-            {% for message in messages %}
-            <p class="message {{ message.tags }}">{{ message }}</p>
-            {% endfor %}
-        </div>
-        {% endif %}
+        
 
         <form action="{% url 'cadastro' %}" method="POST" class="principal-form-campos">
             {% csrf_token %}
@@ -45,6 +39,13 @@ Cadastre-se
             <a href="{% url 'login' %}" class="login">Clique aqui</a>
         </div>
 
+        {% if messages %}
+        <div class="messages">
+            {% for message in messages %}
+            <p class="message {{ message.tags }}">{{ message }}</p>
+            {% endfor %}
+        </div>
+        {% endif %}
     </div>
 </div>
 {% endblock %}

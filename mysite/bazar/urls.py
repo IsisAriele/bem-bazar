@@ -11,4 +11,5 @@ urlpatterns = [
     path("logout/", LogoutView.as_view(), name="logout"),
     path("eventos/", views.eventos, name="eventos"),
     path("cadastroeventos/", views.cadastroeventos, name="cadastroeventos"),
+    path("cadastroitem/", views.cadastroitem, name="cadastroitem"),
 ]

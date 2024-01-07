@@ -1,0 +1,129 @@
+.principal {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    max-width: 1046px;
+    padding-top: 40px;
+    align-items: center;
+}
+
+.principal h3 {
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    color: #333333;
+    margin: 0;
+    margin-top: 40px;
+}
+
+.search-bar {
+    /* position: relative; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 1046px; /* Largura desejada */
+    margin: 20px;
+    padding-right: 32px;
+    width: 100%; /* Ocupa 100% da largura disponível */
+    border-radius: 16px;
+    border: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.search-input {
+    padding: 10px 32px;
+    width: 100%; 
+    border-radius: 16px;
+    border: none;
+}
+
+.search-icon {
+    fill: #909195;
+    width: 20px;
+    height: 20px;
+}
+
+.search-input {
+    padding: 10px 32px;
+    width: 100%; 
+    border-radius: 16px;
+    border: none;
+    outline: none; 
+}
+
+.search-input:focus {
+    outline: none;
+}
+
+
+/* *************************** */
+.principal-evento {
+    display: flex;
+    margin: auto;
+    max-width: 1440px;
+    padding: 40px 0;
+    /* align-items: center; */
+    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+.evento {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    max-width: calc(25% - 20px); /* Ajusta a largura máxima para caber 4 eventos por linha */
+    /* margin-bottom: 20px; */
+    
+}
+
+.evento:not(:nth-child(4n)) {
+    margin-right: 20px; /* Adicione a margem apenas para eventos que não preenchem uma linha inteira */
+}
+
+.evento img {
+    border-top-left-radius: 16px; 
+    border-top-right-radius: 16px;
+}
+
+.evento-conteudo {
+    display: flex;
+    flex-direction: column;
+    /* max-width: 250px; */
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    /* align-items: center; */
+    margin-bottom: 40px;
+
+    background-color: #FAF4F0;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+}
+
+.evento h4 {
+    margin: 0;
+    padding: 0;
+    color: #333333;
+}
+
+.evento-data {
+    display: flex;
+}
+
+.evento-data img {
+    margin-right: 8px;
+}
+
+.evento-conteudo a {
+    background-color: #333333;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    width: auto;
+    padding: 12px 32px;
+    border-radius: 30px;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    margin-bottom: 20px;
+}

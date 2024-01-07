@@ -5,7 +5,7 @@ Cadastre um evento
 {% endblock %}
 {% block css %}
 <link rel="stylesheet" href="{% static 'css/header.css' %}" />
-<link rel="stylesheet" href="{% static 'css/cadastro-eventos.css' %}" />
+<link rel="stylesheet" href="{% static 'css/cadastro-item.css' %}" />
 {% endblock %}
 {%block content %}
 <div class="principal">
@@ -22,17 +22,9 @@ Cadastre um evento
             <label for="nome">Nome</label>
             <input type="text" id="nome" name="nome" required>
     
-            <!-- Campo Email -->
-            <label for="descricao">Descrição</label>
-            <input type="descricao" id="descricao" name="descricao" required>
-    
-            <!-- Campo Telefone -->
-            <label for="datainicio">Data do início do evento</label>
-            <input type="datainicio" id="datainicio" name="datainicio" required>
-    
-            <!-- Campo Senha -->
-            <label for="datafim">Data do fim do evento</label>
-            <input type="datafim" id="datafim" name="datafim" required>
+            
+            <label for="preco">Preço</label>
+            <input type="preco" id="preco" name="preco" required>
     
             <!-- upload de foto -->
             <label for="foto">Upload de imagem do evento</label>
@@ -40,11 +32,15 @@ Cadastre um evento
     
             <!-- Botão de Envio -->
             <div class="botao-cadastro-eventos">
-                <a href="{% url 'cadastroitem' %}"><button type="submit">Cadastrar evento</button></a>
-                
+                <button type="submit">Cadastrar item</button>
             </div>
             
         </form>
+
+        <div class="direct-eventos">
+            <p>Finalizar e seguir para tela de </p>
+            <a href="{% url 'eventos' %}" class="eventos">Eventos cadastrados</a>
+        </div>
 
 
         {% if messages %}
