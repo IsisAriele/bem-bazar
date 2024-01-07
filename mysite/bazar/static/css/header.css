@@ -1,7 +1,13 @@
 * {
     font-family: 'Raleway', sans-serif;
-
+    caret-color: transparent;
 }
+
+input, textarea, select {
+    caret-color: auto; /* Ou a cor desejada para inputs, se aplicável */
+}
+
+
 
 .content,
 .buttons {

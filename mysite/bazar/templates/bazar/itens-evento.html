@@ -1,0 +1,46 @@
+{% extends "bazar/header.html" %}
+{% load static %}
+{% block title %}
+Cadastre um evento
+{% endblock %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/header.css' %}" />
+<link rel="stylesheet" href="{% static 'css/itens-evento.css' %}" />
+{% endblock %}
+{%block content %}
+
+<div class="crumb">
+    <a href="{% url 'eventos' %}" class="event">Eventos ></a>
+    <a href="" class="pagina-atual">Itens</a>
+</div>
+
+<div class="principal-evento">
+    <h3>MK plan o maior bazar de caridade</h3>
+    <p class="descricao">O maior bazar de caridade de Natal, faça também sua doação ou reserve algum item por aqui! Em
+        nosso bazar, mergulhe em um universo vibrante e diversificado, onde a arte e a generosidade se encontram. Este
+        evento anual é muito mais do que uma simples feira de compras; é uma experiência imersiva que celebra a
+        criatividade, a comunidade e a solidariedade.</p>
+    <div class="evento-data">
+        <img src="{% static 'images/calendario.svg' %}" alt="">
+        <p>15 a 17 de agosto</p>
+    </div>
+</div>
+
+<div class="content-itens">
+    <h3>Reserve um item</h3>
+    <div class="principal-itens">
+        <div class="item">
+            <img src="{% static 'images/roupa1.png' %}" alt="">
+            <p class="item-desc">Blusa manga longa</p>
+            <p class="preco">R$ 35.00</p>
+            <div class="botao-reserva">
+                <a href="#">Reserve</a>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock %}

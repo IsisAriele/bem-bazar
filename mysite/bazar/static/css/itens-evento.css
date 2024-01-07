@@ -1,0 +1,141 @@
+.principal-evento {
+    margin: auto;
+    max-width: 1440px;
+    max-height: 45px;
+    padding: 40px 0;
+    
+    display: flex;
+    flex-direction: column;
+}
+
+.principal-evento h3 {
+    margin: 0;
+    font-size: 32px;
+    color: #333333;
+}
+
+.descricao {
+    margin-top: 16px;
+    margin-bottom: 0;
+    line-height: 1.5; 
+    font-size: 18px;
+}
+
+.crumb {
+    display: flex;
+    margin: auto;
+    max-width: 1440px;
+    padding: 10px 0;
+    align-items: center;
+}
+
+.crumb a {
+    text-decoration: none;
+    margin-right: 4px;
+    color: #333333;
+    font-size: 14px;
+    
+    
+}
+
+.event {
+    font-weight: 500;
+}
+
+.pagina-atual {
+    font-weight: 700;
+}
+
+.evento-data {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    
+}
+
+.evento-data img {
+    margin-right: 8px;
+    align-items: center;
+    text-align: center;
+}
+
+.content-itens {
+    margin: auto;
+    max-width: 1440px;
+    max-height: 45px;
+    padding: 40px 0;
+    
+    display: flex;
+    flex-direction: column; 
+    margin-top: 88px;
+}
+
+/* ********************** */
+
+.content-itens h3 {
+    margin: 0;
+    font-size: 24px;
+    color: #333333;
+    margin-bottom: 20px;
+}
+
+.item {
+    background-color: #FAF4F0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 168px;
+    padding: 20px;
+    border-top-right-radius: 16px; /* Raio da borda superior direita */
+    border-bottom-right-radius: 16px;
+    border-top-left-radius: 16px; /* Raio da borda superior direita */
+    border-bottom-left-radius: 16px;
+   
+   
+
+}
+
+.item-desc {
+    margin: 0;
+}
+
+.item img {
+    margin-bottom: 12px;
+    border-top-right-radius: 16px; /* Raio da borda superior direita */
+    border-bottom-right-radius: 16px;
+    border-top-left-radius: 16px; /* Raio da borda superior direita */
+    border-bottom-left-radius: 16px;
+}
+
+.preco {
+    margin: 12px 12px;
+    font-weight: 600;
+}
+
+.botao-reserva {
+    text-decoration: none;
+    background-color: #333333;
+    padding: 10px 32px;
+    border-radius: 30px;
+
+}
+
+.botao-reserva a{
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.botao-reserva {
+    margin-top: 12px;
+}
+
+
+
+
+
+
+
+

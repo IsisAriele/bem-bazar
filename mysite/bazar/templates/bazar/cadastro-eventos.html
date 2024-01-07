@@ -8,6 +8,12 @@ Cadastre um evento
 <link rel="stylesheet" href="{% static 'css/cadastro-eventos.css' %}" />
 {% endblock %}
 {%block content %}
+
+<div class="crumb">
+    <a href="{% url 'eventos' %}" class="event">Eventos ></a>
+    <a href="" class="pagina-atual">Cadastre um evento</a>
+</div>
+
 <div class="principal">
     <div class="principal-forms">
         <div class="principal-titulo">
@@ -40,8 +46,7 @@ Cadastre um evento
     
             <!-- Botão de Envio -->
             <div class="botao-cadastro-eventos">
-                <a href="{% url 'cadastroitem' %}"><button type="submit">Cadastrar evento</button></a>
-                
+                <button type="submit">Cadastrar evento</button>
             </div>
             
         </form>

@@ -8,10 +8,15 @@ Cadastre um evento
 <link rel="stylesheet" href="{% static 'css/cadastro-item.css' %}" />
 {% endblock %}
 {%block content %}
+<div class="crumb">
+    <a href="{% url 'eventos' %}" class="event">Eventos ></a>
+    <a href="" class="pagina-atual">Cadastre um item</a>
+</div>
+
 <div class="principal">
     <div class="principal-forms">
         <div class="principal-titulo">
-            <h3>Cadastre um evento</h3>
+            <h3>Cadastre um item</h3>
             <p>Preencha os campos abaixo</p>
         </div>
         
