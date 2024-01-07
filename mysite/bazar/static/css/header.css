@@ -16,6 +16,13 @@
     align-items: center;
 }
 
+.content p {
+    margin-right: 30px;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+}
+
 .logo {
     width: 200px;
     height: auto;
@@ -40,7 +47,30 @@
     text-decoration: none;
     padding: 12px 32px;
     border-radius: 30px;
-    font-size: 20px;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.cadastro-eventos {
+    background-color: #333333;
+    color: white;
+    text-decoration: none;
+    padding: 12px 32px;
+    border-radius: 30px;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    margin-right: 30px;
+}
+
+.sair {
+    background-color: #BF8949;
+    color: white;
+    text-decoration: none;
+    padding: 12px 32px;
+    border-radius: 30px;
+    font-size: 18px;
     font-style: normal;
     font-weight: 400;
 }
@@ -59,9 +89,9 @@
 }
 
 .message.success {
-    background-color: green;
+    background-color: #4A8D86;
 }
 
 .message.error {
-    background-color: red;
+    background-color: #A64443;
 }

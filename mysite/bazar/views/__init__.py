@@ -13,3 +13,8 @@ def eventos(request):
     temp = "temporário"
     context = {"temp": temp}
     return render(request, "bazar/eventos.html", context)
+
+def cadastroeventos(request):
+    temp = "temporário"
+    context = {"temp": temp}
+    return render(request, "bazar/cadastro-eventos.html", context)
