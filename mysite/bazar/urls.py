@@ -1,4 +1,5 @@
 from bazar.views.autenticacao_views import LoginView, LogoutView
+from bazar.views.cadastro_eventos_views import CadastroEventoView
 from bazar.views.cadastro_usuarios_views import CadastroUsuarioView
 from django.urls import path
 
@@ -10,7 +11,7 @@ urlpatterns = [
     path("login/", LoginView.as_view(), name="login"),
     path("logout/", LogoutView.as_view(), name="logout"),
     path("eventos/", views.eventos, name="eventos"),
-    path("cadastroeventos/", views.cadastroeventos, name="cadastroeventos"),
+    path("cadastroeventos/", CadastroEventoView.as_view(), name="cadastroeventos"),
     path("cadastroitem/", views.cadastroitem, name="cadastroitem"),
     path("itensevento/", views.itensevento, name="itensevento"),
 ]

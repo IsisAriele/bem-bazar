@@ -11,7 +11,7 @@ class Evento(models.Model):
     descricao = models.CharField(max_length=255)
     data_inicio = models.DateTimeField()
     data_fim = models.DateTimeField()
-    poster = models.ImageField(upload_to="posters/")
+    poster = models.ImageField(upload_to="posters/", blank=True, null=True)
 
     def __str__(self):
         return f"{self.nome} ----- {self.usuario.username}"

@@ -84,7 +84,13 @@
     margin-bottom: 16px; /* Adapte conforme necessário para o espaçamento desejado */
 }
 
-#nome, #descricao, #datainicio, #datafim{
+/* #nome, #descricao, #datainicio, #datafim{
+    border-radius: 8px;
+    border: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+} */
+
+.principal-form-campos input{
     border-radius: 8px;
     border: none;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -122,6 +128,7 @@
     color: #333333;
 }
 
-#foto input{
+#id_poster {
     border: none;
+    box-shadow: none;
 }

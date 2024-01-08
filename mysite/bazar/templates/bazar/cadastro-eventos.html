@@ -21,28 +21,14 @@ Cadastre um evento
             <p>Preencha os campos abaixo</p>
         </div>
         
-        <form action="" method="" class="principal-form-campos">
+        <form action="{% url 'cadastroeventos' %}" method="POST" class="principal-form-campos">
             {% csrf_token %}
             
-            <!-- Campo Nome -->
-            <label for="nome">Nome</label>
-            <input type="text" id="nome" name="nome" required>
-    
-            <!-- Campo Email -->
-            <label for="descricao">Descrição</label>
-            <input type="descricao" id="descricao" name="descricao" required>
-    
-            <!-- Campo Telefone -->
-            <label for="datainicio">Data do início do evento</label>
-            <input type="datainicio" id="datainicio" name="datainicio" required>
-    
-            <!-- Campo Senha -->
-            <label for="datafim">Data do fim do evento</label>
-            <input type="datafim" id="datafim" name="datafim" required>
-    
-            <!-- upload de foto -->
-            <label for="foto">Upload de imagem do evento</label>
-            <input type="file" id="foto" name="foto" accept="image/*" required>
+            
+            {% for field in form.visible_fields %}
+            {{ field.errors }}
+            {{ field.label_tag }} {{ field }}
+            {% endfor %}
     
             <!-- Botão de Envio -->
             <div class="botao-cadastro-eventos">
