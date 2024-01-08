@@ -83,13 +83,12 @@
     padding: 8px;
     
     margin-bottom: 16px; /* Adapte conforme necessário para o espaçamento desejado */
-}
-
-#nome, #preco{
     border-radius: 8px;
     border: none;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
+
+
 
 .principal-form-campos button {
     margin: 0 auto; 
@@ -123,10 +122,6 @@
     color: #333333;
 }
 
-#foto input{
-    border: none;
-}
-
 
 .direct-eventos {
     display: flex;
@@ -140,4 +135,9 @@
     text-decoration: none;
     font-weight: 600;
     color: #333333;
+}
+
+#id_foto {
+    border: none;
+    box-shadow: none;
 }
