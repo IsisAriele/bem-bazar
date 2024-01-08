@@ -3,7 +3,7 @@
     max-width: 1440px;
     max-height: 45px;
     padding: 40px 0;
-    
+
     display: flex;
     flex-direction: column;
 }
@@ -17,7 +17,7 @@
 .descricao {
     margin-top: 16px;
     margin-bottom: 0;
-    line-height: 1.5; 
+    line-height: 1.5;
     font-size: 18px;
 }
 
@@ -34,8 +34,6 @@
     margin-right: 4px;
     color: #333333;
     font-size: 14px;
-    
-    
 }
 
 .event {
@@ -50,7 +48,7 @@
     display: flex;
     align-items: center;
     font-size: 18px;
-    
+
 }
 
 .evento-data img {
@@ -64,9 +62,9 @@
     max-width: 1440px;
     max-height: 45px;
     padding: 40px 0;
-    
+
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     margin-top: 88px;
 }
 
@@ -79,20 +77,34 @@
     margin-bottom: 20px;
 }
 
+.principal-itens {
+    display: flex;
+    /* margin: auto; */
+    /* padding: 40px 0; */
+    /* align-items: center; */
+    /* justify-content: space-between; */
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
 .item {
     background-color: #FAF4F0;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    /* align-items: center; */
     width: 168px;
-    padding: 20px;
-    border-top-right-radius: 16px; /* Raio da borda superior direita */
+    padding: 18px;
+    border-top-right-radius: 16px;
+    /* Raio da borda superior direita */
     border-bottom-right-radius: 16px;
-    border-top-left-radius: 16px; /* Raio da borda superior direita */
+    border-top-left-radius: 16px;
+    /* Raio da borda superior direita */
     border-bottom-left-radius: 16px;
-   
-   
-
+    margin-bottom: 20px;
+    width: calc(16.666% - (20px * 3));
+    /* width: calc(16.666% - 20px); */
+    /* box-sizing: border-box; */
+    margin-right: 20px;
 }
 
 .item-desc {
@@ -101,15 +113,36 @@
 
 .item img {
     margin-bottom: 12px;
-    border-top-right-radius: 16px; /* Raio da borda superior direita */
+    border-top-right-radius: 16px;
+    /* Raio da borda superior direita */
     border-bottom-right-radius: 16px;
-    border-top-left-radius: 16px; /* Raio da borda superior direita */
+    border-top-left-radius: 16px;
+    /* Raio da borda superior direita */
     border-bottom-left-radius: 16px;
+
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    /* Isso fará com que a imagem seja cortada para caber no tamanho definido */
+    object-position: center;
+    /* Isso centraliza a imagem dentro do contêiner */
+    justify-content: center;
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+
+    /* max-width: calc(25% - 20px); Ajusta a largura máxima para caber 6 itens por linha */
 }
 
 .preco {
-    margin: 12px 12px;
+    text-align: left;
+    /* Adiciona esta linha para alinhar o texto à esquerda */
+    margin: 12px 0;
+    /* margin: 12px 12px; */
     font-weight: 600;
+    /* text-align: left; */
 }
 
 .botao-reserva {
@@ -117,25 +150,13 @@
     background-color: #333333;
     padding: 10px 32px;
     border-radius: 30px;
-
+    text-align: center;
 }
 
-.botao-reserva a{
+.botao-reserva a {
     text-decoration: none;
     color: white;
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
 }
-
-.botao-reserva {
-    margin-top: 12px;
-}
-
-
-
-
-
-
-
-
