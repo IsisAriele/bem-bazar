@@ -48,7 +48,7 @@ Cadastre um evento
             </div>
             {% else %}
             <div class="botao-reserva">
-                <a href="#">Reserve</a>
+                <a href="{% url 'reservaritem' evento_id=evento.id item_id=item.id %}">Reserve</a>
             </div>
             {% endif %}
         </div>
