@@ -32,7 +32,7 @@ class CadastroItemView(View):
                 evento=evento,
                 nome=form.data["nome"],
                 preco=form.data["preco"],
-                foto=form.files["foto"],
+                foto=form.files.get("foto"),
             )
             messages.success(request, "Item cadastrado com sucesso!")
             return redirect("cadastroitem", evento_id=evento.id)

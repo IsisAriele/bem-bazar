@@ -1,7 +1,5 @@
 from bazar.forms.cadastro_eventos_forms import CadastroEventoForm
 from bazar.models import Evento
-from django.contrib import messages
-from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import redirect, render
 from django.utils.decorators import method_decorator
@@ -26,7 +24,7 @@ class CadastroEventoView(View):
                 descricao=form.data["descricao"],
                 data_inicio=form.data["data_inicio"],
                 data_fim=form.data["data_fim"],
-                poster=form.files["poster"],
+                poster=form.files.get("poster"),
             )
             return redirect("cadastroitem", evento_id=evento.id)
 

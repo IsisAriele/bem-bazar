@@ -1,4 +1,4 @@
-import locale
+from datetime import datetime
 
 from django.contrib.auth.models import User
 from django.db import models
@@ -45,6 +45,12 @@ class Evento(models.Model):
         data_fim_formatada = f"{self.data_fim.strftime('%d')} de {mes_fim}"
 
         return f"{data_inicio_formatada} - {data_fim_formatada}"
+
+    def save(self, *args, **kwargs):
+        self.data_fim = datetime.strptime(self.data_fim, "%Y-%m-%d").replace(
+            minute=59, hour=23, second=59
+        )
+        super(Evento, self).save(*args, **kwargs)
 
     def __str__(self):
         return f"{self.nome} ----- {self.usuario.username}"
