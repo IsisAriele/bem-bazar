@@ -70,11 +70,61 @@
 
 /* ********************** */
 
+.search-bar {
+    /* position: relative; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 1046px; /* Largura desejada */
+    margin: 20px 0px;
+    padding-right: 32px;
+    width: 100%; /* Ocupa 100% da largura disponível */
+    border-radius: 30px;
+    border: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+   
+}
+
+.search-input {
+    padding: 16px 32px;
+    width: 100%; 
+    border-radius: 30px;
+    border: none;
+}
+
+.search-icon {
+    fill: #909195;
+    width: 20px;
+    height: 20px;
+}
+
+.search-input {
+    padding: 16px 32px;
+    width: 100%; 
+    border-radius: 30px;
+    border: none;
+    outline: none; 
+    font-size: 14px;
+}
+
+.search-input:focus {
+    outline: none;
+}
+
+.search-bar button{
+    border: none;
+    box-shadow: none;
+    background-color: transparent; 
+}
+
+
+/* *************************** */
 .content-itens h3 {
     margin: 0;
     font-size: 24px;
     color: #333333;
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
 }
 
 .principal-itens {

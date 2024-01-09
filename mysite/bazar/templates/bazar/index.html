@@ -1,8 +1,8 @@
-{% extends "bazar/header.html" %} 
-{% load static %} 
+{% extends "bazar/header.html" %}
+{% load static %}
 {% block title %}
 Bem bazar
-{% endblock %} 
+{% endblock %}
 {% block css %}
 <link rel="stylesheet" href="{% static 'css/header.css' %}" />
 <link rel="stylesheet" href="{% static 'css/index.css' %}" />
@@ -11,27 +11,19 @@ Bem bazar
 
 {% block content %}
 
-  <div class="principal">
-    <div class="principal-image">
-      <img src="{% static 'images/chamadaindex.svg' %}" alt="">
-    </div>
-    <div class="principal-descricao">
-      <p>Anuncie agora mesmo o seu evento de caridade na BemBazar. Aqui você é visto e muda o mundo fazendo o bem.</p>
-    </div>
-   
-    <a href="{% url 'eventos' %}" class="principal-eventos">Confira os eventos!</a>
+<div class="principal">
+  <div class="principal-image">
+    <img src="{% static 'images/chamadaindex.svg' %}" alt="">
+  </div>
+  <div class="principal-descricao">
+    <p>Anuncie agora mesmo o seu evento de caridade na BemBazar. Aqui você é visto e muda o mundo fazendo o bem.</p>
   </div>
 
-  <div class="background-image">
-      <img src="{% static 'images/imagemindex.svg' %}" alt="">
-  </div>
+  <a href="{% url 'eventos' %}" class="principal-eventos">Confira os eventos!</a>
+</div>
+
+<div class="background-image">
+  <img src="{% static 'images/imagemindex.svg' %}" alt="">
+</div>
 
 {% endblock %}
-
-
-
-
-
-
-
-  

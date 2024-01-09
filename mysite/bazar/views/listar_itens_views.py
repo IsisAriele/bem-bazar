@@ -14,7 +14,12 @@ class ListarItensView(View):
         except Evento.DoesNotExist:
             return redirect("eventos")
 
-        itens = Item.objects.filter(evento=evento)
-        context = {"itens": itens, "evento": evento}
+        busca_por_nome = request.GET.get("busca_por_nome", None)
 
+        if busca_por_nome:
+            itens = Item.objects.filter(evento=evento, nome__icontains=busca_por_nome)
+        else:
+            itens = Item.objects.filter(evento=evento)
+
+        context = {"itens": itens, "evento": evento}
         return render(request, "bazar/itens-evento.html", context)

@@ -12,7 +12,7 @@ Cadastre-se
 <div class="principal">
     <h3>Confira nossos eventos</h3>
     <div class="search-bar">
-        <input type="text" class="search-input" placeholder="Pesquise por um item específico...">
+        <input type="text" class="search-input" placeholder="Pesquise por um evento...">
         <a href="#"><img src="{% static 'images/busca.svg' %}" alt="Buscar" class="search-icon"></a>
     </div>
 </div>
@@ -21,11 +21,11 @@ Cadastre-se
     {% for evento in eventos %}
     <div class="evento">
         {% if evento.poster %}
-            <img src="{{ evento.poster.url }}" alt="" class="banner">
+        <img src="{{ evento.poster.url }}" alt="" class="banner">
         {% else %}
-            <img src="{% static 'images/default2.png' %}" alt="" class="banner">
+        <img src="{% static 'images/default2.png' %}" alt="" class="banner">
         {% endif %}
-        
+
         <div class="evento-conteudo">
             <div class="evento-data">
                 <img src="{% static 'images/calendario.svg' %}" alt="">

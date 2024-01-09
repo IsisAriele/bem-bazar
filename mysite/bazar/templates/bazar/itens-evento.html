@@ -23,25 +23,26 @@ Cadastre um evento
     </div>
 </div>
 
-<div class="content-itens">
+<div class="content-itens"> <!--principal -->
     <h3>Reserve um item</h3>
+    <form action="" method="get">
+        <div class="search-bar">
+            <input type="text" class="search-input" placeholder="Pesquise por um item específico..."
+                name="busca_por_nome">
+            <button type="submit"><img src="{% static 'images/busca.svg' %}" alt="Buscar" class="search-icon"></button>
+        </div>
+    </form>
+
     <div class="principal-itens">
         {% for item in itens %}
         <div class="item">
             {% if item.foto %}
-                <img src="{{ item.foto.url }}" alt="">
+            <img src="{{ item.foto.url }}" alt="">
             {% else %}
-                <img src="{% static 'images/default2.png' %}" alt="">
+            <img src="{% static 'images/default2.png' %}" alt="">
             {% endif %}
             <p class="item-desc">{{ item.nome }}</p>
             <p class="preco">R$ {{ item.preco }}</p>
-            <!-- <div class="botao-reserva">
-                {% if item.reservado %}
-                    <a href="#" id="botao-reservado">Item Reservado</a>
-                {% else %}
-                    <a href="#">Reserve</a>
-                {% endif %}
-            </div> -->
             {% if item.reservado %}
             <div class="botao-reservado">
                 <a href="#">Item Reservado</a>

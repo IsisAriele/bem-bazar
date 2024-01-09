@@ -20,21 +20,22 @@ Cadastre um evento
             <h3>Cadastre um evento</h3>
             <p>Preencha os campos abaixo</p>
         </div>
-        
-        <form action="{% url 'cadastroeventos' %}" method="POST" class="principal-form-campos" enctype="multipart/form-data">
+
+        <form action="{% url 'cadastroeventos' %}" method="POST" class="principal-form-campos"
+            enctype="multipart/form-data">
             {% csrf_token %}
-            
-            
+
+
             {% for field in form.visible_fields %}
             {{ field.errors }}
             {{ field.label_tag }} {{ field }}
             {% endfor %}
-    
+
             <!-- Botão de Envio -->
             <div class="botao-cadastro-eventos">
                 <button type="submit">Cadastrar evento</button>
             </div>
-            
+
         </form>
 
 

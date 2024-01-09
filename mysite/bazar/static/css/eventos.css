@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     margin: auto;
-    max-width: 1046px;
+    max-width: 1400px;
     padding-top: 40px;
     align-items: center;
 }
@@ -21,7 +21,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 1046px; /* Largura desejada */
+    width: 1400px; /* Largura desejada */
     margin: 20px;
     padding-right: 32px;
     width: 100%; /* Ocupa 100% da largura disponível */
@@ -35,6 +35,7 @@
     width: 100%; 
     border-radius: 30px;
     border: none;
+    font-size: 14px;
 }
 
 .search-icon {
@@ -61,7 +62,7 @@
     display: flex;
     margin: auto;
     max-width: 1440px;
-    padding: 40px 0;
+    padding: 20px 0;
     /* align-items: center; */
     justify-content: space-between;
     flex-wrap: wrap;

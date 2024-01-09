@@ -1,6 +1,4 @@
-from bazar.forms.cadastro_eventos_forms import CadastroEventoForm
 from bazar.models import Evento, Item, Reserva
-from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import redirect, render
 from django.utils import timezone
