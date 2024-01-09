@@ -3,6 +3,7 @@ from bazar.views.cadastro_eventos_views import CadastroEventoView
 from bazar.views.cadastro_itens_views import CadastroItemView
 from bazar.views.cadastro_usuarios_views import CadastroUsuarioView
 from bazar.views.listar_eventos_views import ListarEventosView
+from bazar.views.listar_itens_views import ListarItensView
 from django.urls import path
 
 from . import views
@@ -19,5 +20,5 @@ urlpatterns = [
         CadastroItemView.as_view(),
         name="cadastroitem",
     ),
-    path("itensevento/", views.itensevento, name="itensevento"),
+    path("evento/<int:evento_id>/itens", ListarItensView.as_view(), name="itensevento"),
 ]

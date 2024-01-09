@@ -15,116 +15,44 @@ Cadastre um evento
 </div>
 
 <div class="principal-evento">
-    <h3>MK plan o maior bazar de caridade</h3>
-    <p class="descricao">O maior bazar de caridade de Natal, faça também sua doação ou reserve algum item por aqui! Em
-        nosso bazar, mergulhe em um universo vibrante e diversificado, onde a arte e a generosidade se encontram. Este
-        evento anual é muito mais do que uma simples feira de compras; é uma experiência imersiva que celebra a
-        criatividade, a comunidade e a solidariedade.</p>
+    <h3>{{ evento.nome }}</h3>
+    <p class="descricao">{{ evento.descricao }}</p>
     <div class="evento-data">
         <img src="{% static 'images/calendario.svg' %}" alt="">
-        <p>15 a 17 de agosto</p>
+        <p>{{ evento.data_evento }}</p>
     </div>
 </div>
 
 <div class="content-itens">
     <h3>Reserve um item</h3>
     <div class="principal-itens">
+        {% for item in itens %}
         <div class="item">
-            <img src="{% static 'images/roupa1.png' %}" alt="">
-            <p class="item-desc">Blusa manga longa</p>
-            <p class="preco">R$ 35.00</p>
-            <div class="botao-reserva" id="botao-reserva">
-                <a href="#" onclick="alterarEstadoReserva(this)">Reserve</a>
+            {% if item.foto %}
+                <img src="{{ item.foto.url }}" alt="">
+            {% else %}
+                <img src="{% static 'images/default2.png' %}" alt="">
+            {% endif %}
+            <p class="item-desc">{{ item.nome }}</p>
+            <p class="preco">R$ {{ item.preco }}</p>
+            <!-- <div class="botao-reserva">
+                {% if item.reservado %}
+                    <a href="#" id="botao-reservado">Item Reservado</a>
+                {% else %}
+                    <a href="#">Reserve</a>
+                {% endif %}
+            </div> -->
+            {% if item.reservado %}
+            <div class="botao-reservado">
+                <a href="#">Item Reservado</a>
             </div>
-        </div>
-
-        <div class="item">
-            <img src="{% static 'images/roupa2.png' %}" alt="">
-            <p class="item-desc">Blusa manga longa</p>
-            <p class="preco">R$ 35.00</p>
+            {% else %}
             <div class="botao-reserva">
                 <a href="#">Reserve</a>
             </div>
+            {% endif %}
         </div>
-
-        <div class="item">
-            <img src="{% static 'images/roupa3.png' %}" alt="">
-            <p class="item-desc">Blusa manga longa</p>
-            <p class="preco">R$ 35.00</p>
-            <div class="botao-reserva">
-                <a href="#">Reserve</a>
-            </div>
-        </div>
-
-        <div class="item">
-            <img src="{% static 'images/roupa4.png' %}" alt="">
-            <p class="item-desc">Blusa manga longa</p>
-            <p class="preco">R$ 35.00</p>
-            <div class="botao-reserva">
-                <a href="#">Reserve</a>
-            </div>
-        </div>
-
-        <div class="item">
-            <img src="{% static 'images/roupa5.png' %}" alt="">
-            <p class="item-desc">Blusa manga longa</p>
-            <p class="preco">R$ 35.00</p>
-            <div class="botao-reserva">
-                <a href="#">Reserve</a>
-            </div>
-        </div>
-
-        <div class="item">
-            <img src="{% static 'images/roupa6.png' %}" alt="">
-            <p class="item-desc">Blusa manga longa</p>
-            <p class="preco">R$ 35.00</p>
-            <div class="botao-reserva">
-                <a href="#">Reserve</a>
-            </div>
-        </div>
-
-
-        <div class="item">
-            <img src="{% static 'images/roupa7.png' %}" alt="">
-            <p class="item-desc">Blusa manga longa</p>
-            <p class="preco">R$ 35.00</p>
-            <div class="botao-reserva">
-                <a href="#">Reserve</a>
-            </div>
-        </div>
-
-        <div class="item">
-            <img src="{% static 'images/roupa8.png' %}" alt="">
-            <p class="item-desc">Blusa manga longa</p>
-            <p class="preco">R$ 35.00</p>
-            <div class="botao-reserva">
-                <a href="#">Reserve</a>
-            </div>
-        </div>
+        {% endfor %}
     </div>
 </div>
-
-
-<!-- Código referente as mudanças no botão de reservas de itens -->
-<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-<script>
-    $(document).ready(function () {
-        $(".botao-reserva a").on("click", function () {
-            var botaoReserva = $(this);
-            var itemReservadoTexto = "Item reservado";
-            var corCinza = "#909195";
-            var novoFontSize = "14px";
-
-            // Verificar se o texto atual é "Reserve"
-            if (botaoReserva.text() === "Reserve") {
-                // Mudar o texto para "Item Reservado"
-                botaoReserva.text(itemReservadoTexto);
-                // Mudar a cor de fundo para cinza
-                botaoReserva.parent().css("background-color", corCinza);
-                botaoReserva.css("font-size", novoFontSize);
-            }
-        });
-    });
-</script>
-
 {% endblock %}

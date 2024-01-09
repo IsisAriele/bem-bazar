@@ -7,15 +7,3 @@ def index(request):
     temp = "temporário"
     context = {"temp": temp}
     return render(request, "bazar/index.html", context)
-
-
-def eventos(request):
-    temp = "temporário"
-    context = {"temp": temp}
-    return render(request, "bazar/eventos.html", context)
-
-
-def itensevento(request):
-    temp = "temporário"
-    context = {"temp": temp}
-    return render(request, "bazar/itens-evento.html", context)

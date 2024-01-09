@@ -60,7 +60,11 @@ class Item(models.Model):
     evento = models.ForeignKey(Evento, on_delete=models.CASCADE)
     foto = models.ImageField(upload_to="itens/")
     nome = models.CharField(max_length=255)
-    preco = models.DecimalField(max_digits=5, decimal_places=2)
+    preco = models.DecimalField(max_digits=10, decimal_places=2)
+
+    @property
+    def reservado(self):
+        return Reserva.objects.filter(item=self).exists()
 
     def __str__(self):
         return f"{self.nome} ----- {self.evento.nome}"

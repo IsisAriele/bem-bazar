@@ -160,3 +160,19 @@
     font-style: normal;
     font-weight: 400;
 }
+
+.botao-reservado {
+    text-decoration: none;
+    background-color: #909195;
+    padding: 10px 32px;
+    border-radius: 30px;
+    text-align: center;
+}
+
+.botao-reservado a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+}
