@@ -15,12 +15,6 @@ def eventos(request):
     return render(request, "bazar/eventos.html", context)
 
 
-def cadastroitem(request):
-    temp = "temporário"
-    context = {"temp": temp}
-    return render(request, "bazar/cadastro-item.html", context)
-
-
 def itensevento(request):
     temp = "temporário"
     context = {"temp": temp}

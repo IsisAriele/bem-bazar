@@ -1,3 +1,5 @@
+import locale
+
 from django.contrib.auth.models import User
 from django.db import models
 
@@ -6,12 +8,43 @@ from django.db import models
 # por esse motivo ele será o suficiente para as demais implementações da minha aplicação.
 class Evento(models.Model):
     usuario = models.ForeignKey(User, on_delete=models.CASCADE)
-    ativo = models.BooleanField(default=True)
     nome = models.CharField(max_length=255)
     descricao = models.CharField(max_length=255)
     data_inicio = models.DateTimeField()
     data_fim = models.DateTimeField()
     poster = models.ImageField(upload_to="posters/", blank=True, null=True)
+
+    @property
+    def descricao_resumida(self):
+        if len(self.descricao) > 74:
+            return f"{self.descricao[:71]}..."
+
+        return self.descricao
+
+    @property
+    def data_evento(self):
+        meses_dict = {
+            1: "Janeiro",
+            2: "Fevereiro",
+            3: "Março",
+            4: "Abril",
+            5: "Maio",
+            6: "Junho",
+            7: "Julho",
+            8: "Agosto",
+            9: "Setembro",
+            10: "Outubro",
+            11: "Novembro",
+            12: "Dezembro",
+        }
+
+        mes_inicio = meses_dict[self.data_inicio.month]
+        mes_fim = meses_dict[self.data_fim.month]
+
+        data_inicio_formatada = f"{self.data_inicio.strftime('%d')} de {mes_inicio}"
+        data_fim_formatada = f"{self.data_fim.strftime('%d')} de {mes_fim}"
+
+        return f"{data_inicio_formatada} - {data_fim_formatada}"
 
     def __str__(self):
         return f"{self.nome} ----- {self.usuario.username}"

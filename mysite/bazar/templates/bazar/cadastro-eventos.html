@@ -21,7 +21,7 @@ Cadastre um evento
             <p>Preencha os campos abaixo</p>
         </div>
         
-        <form action="{% url 'cadastroeventos' %}" method="POST" class="principal-form-campos">
+        <form action="{% url 'cadastroeventos' %}" method="POST" class="principal-form-campos" enctype="multipart/form-data">
             {% csrf_token %}
             
             

@@ -83,6 +83,14 @@
 .evento img {
     border-top-left-radius: 16px; 
     border-top-right-radius: 16px;
+    
+    /* Isso fará com que a imagem seja cortada para caber no tamanho definido */
+    /* object-position: center; */
+}
+
+.banner {
+    height: 190px;
+    object-fit: cover;
 }
 
 .evento-conteudo {

@@ -20,7 +20,7 @@ Cadastre um evento
             <p>Preencha os campos abaixo</p>
         </div>
         
-        <form action="{% url 'cadastroitem' evento_id=evento_id %}" method="POST" class="principal-form-campos">
+        <form action="{% url 'cadastroitem' evento_id=evento_id %}" method="POST" class="principal-form-campos" enctype="multipart/form-data">
             {% csrf_token %}
             
             

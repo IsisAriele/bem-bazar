@@ -18,7 +18,27 @@ Cadastre-se
 </div>
 
 <div class="principal-evento">
+    {% for evento in eventos %}
     <div class="evento">
+        {% if evento.poster %}
+            <img src="{{ evento.poster.url }}" alt="" class="banner">
+        {% else %}
+            <img src="{% static 'images/default2.png' %}" alt="" class="banner">
+        {% endif %}
+        
+        <div class="evento-conteudo">
+            <div class="evento-data">
+                <img src="{% static 'images/calendario.svg' %}" alt="">
+                <p>{{evento.data_evento}}</p>
+            </div>
+            <h4>{{ evento.nome }}</h4>
+            <p>{{ evento.descricao_resumida }}</p>
+            <a href="{% url 'itensevento' %}">Saiba mais</a>
+            <img src="{% static 'images/linha.svg' %}" alt="">
+        </div>
+    </div>
+    {% endfor %}
+    <!-- <div class="evento">
         <img src="{% static 'images/eventocaridade1.png' %}" alt="">
         <div class="evento-conteudo">
             <div class="evento-data">
@@ -44,7 +64,7 @@ Cadastre-se
             <a href="{% url 'itensevento' %}">Saiba mais</a>
             <img src="{% static 'images/linha.svg' %}" alt="">
         </div>
-        
+
     </div>
 
     <div class="evento">
@@ -58,7 +78,7 @@ Cadastre-se
             <p>O maior bazar de caridade de Natal, faça também sua doação ou reserve algum item por aqui!</p>
             <a href="{% url 'itensevento' %}">Saiba mais</a>
             <img src="{% static 'images/linha.svg' %}" alt="">
-        </div> 
+        </div>
     </div>
 
     <div class="evento">
@@ -72,9 +92,8 @@ Cadastre-se
             <p>O maior bazar de caridade de Natal, faça também sua doação ou reserve algum item por aqui!</p>
             <a href="{% url 'itensevento' %}">Saiba mais</a>
             <img src="{% static 'images/linha.svg' %}" alt="">
-        </div>   
+        </div>
     </div>
-
 
     <div class="evento">
         <img src="{% static 'images/eventocaridade3.png' %}" alt="">
@@ -87,16 +106,8 @@ Cadastre-se
             <p>O maior bazar de caridade de Natal, faça também sua doação ou reserve algum item por aqui!</p>
             <a href="{% url 'itensevento' %}">Saiba mais</a>
             <img src="{% static 'images/linha.svg' %}" alt="">
-        </div> 
-    </div>
-  
-    </div>
-
-
-
-    
+        </div>
+    </div> -->
 </div>
-
-
-
+</div>
 {% endblock %}
