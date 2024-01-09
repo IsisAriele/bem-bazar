@@ -1,5 +1,4 @@
 from datetime import datetime
-
 from django.contrib.auth.models import User
 from django.db import models
 
@@ -10,8 +9,8 @@ class Evento(models.Model):
     usuario = models.ForeignKey(User, on_delete=models.CASCADE)
     nome = models.CharField(max_length=255)
     descricao = models.CharField(max_length=255)
-    data_inicio = models.DateTimeField()
-    data_fim = models.DateTimeField()
+    data_inicio = models.DateField()
+    data_fim = models.DateField()
     poster = models.ImageField(upload_to="posters/", blank=True, null=True)
 
     @property
@@ -43,14 +42,8 @@ class Evento(models.Model):
 
         data_inicio_formatada = f"{self.data_inicio.strftime('%d')} de {mes_inicio}"
         data_fim_formatada = f"{self.data_fim.strftime('%d')} de {mes_fim}"
-
+ 
         return f"{data_inicio_formatada} - {data_fim_formatada}"
-
-    def save(self, *args, **kwargs):
-        self.data_fim = datetime.strptime(self.data_fim, "%Y-%m-%d").replace(
-            minute=59, hour=23, second=59
-        )
-        super(Evento, self).save(*args, **kwargs)
 
     def __str__(self):
         return f"{self.nome} ----- {self.usuario.username}"
